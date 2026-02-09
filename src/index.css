@@ -1,0 +1,171 @@
+/* ====== GOOGLE FONT ROMÁNTICA ====== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ====== VARIABLES DE COLOR (Teoría del color) ====== */
+
+:root {
+  --pink-50: #fff0f3;
+  --pink-100: #ffd6e0;
+  --pink-200: #ffb3c6;
+  --pink-300: #ff8fab;
+  --pink-400: #fb6f92;
+  --pink-500: #ff4d6d;
+  --pink-600: #e63956;
+  --pink-700: #c9184a;
+
+  --romantic-white: #fff9fb;
+  --soft-gold: #d4af37;
+
+  --text-dark: #3a3a3a;
+}
+
+
+/* ====== BASE ====== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg,
+      var(--pink-50),
+      #ffffff,
+      var(--pink-100));
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Safari viewport fix */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.min-h-screen-safe {
+  min-height: 100svh;
+}
+
+
+/* ====== SELECCIÓN DE TEXTO ====== */
+
+::selection {
+  background: var(--pink-300);
+  color: white;
+}
+
+
+/* ====== SCROLLBAR ROMÁNTICA ====== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-300);
+  border-radius: 10px;
+}
+
+
+/* ====== UTILIDADES ROMÁNTICAS ====== */
+
+.romantic-gradient {
+  background: linear-gradient(135deg,
+      var(--pink-200),
+      var(--pink-400),
+      var(--pink-300));
+}
+
+.gold-text {
+  color: var(--soft-gold);
+}
+
+.romantic-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
+}
+
+
+/* ====== BOTONES ROMÁNTICOS ====== */
+
+.btn-romantic {
+  background: linear-gradient(135deg,
+      var(--pink-400),
+      var(--pink-500));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.btn-romantic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+}
+
+.btn-romantic:active {
+  transform: scale(0.95);
+}
+
+
+/* ====== SOMBRAS SUAVES ====== */
+
+.soft-shadow {
+  box-shadow: 0 15px 40px rgba(255, 77, 109, 0.15);
+}
+
+
+/* ====== ANIMACIONES ROMÁNTICAS ====== */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* ====== EFECTO BRILLO DORADO ====== */
+
+.gold-glow {
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5),
+    0 0 16px rgba(212, 175, 55, 0.3);
+}
+
+
+/* ====== IMÁGENES ====== */
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+
+/* ====== SAFE AREA IPHONE ====== */
+
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
