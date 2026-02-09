@@ -3,10 +3,10 @@ import HeartImage from "../components/HeartImage";
 
 export default function Memories({ next }) {
     const photos = [
-        "/photos/1.jpeg",
-        "/photos/2.jpeg",
-        "/photos/3.jpeg",
-        "/photos/4.jpeg",
+        `${base}photos/1.jpeg`,
+        `${base}photos/2.jpeg`,
+        `${base}photos/3.jpeg`,
+        `${base}photos/4.jpeg`,
     ];
 
     return (
