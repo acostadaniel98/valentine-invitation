@@ -11,15 +11,21 @@ import Memories from "./sections/Memories";
 import Proposal from "./sections/Proposal";
 
 export default function App() {
-    const [page, setPage] = useState(0);
-    const next = () => setPage(p => p + 1);
 
     const pages = [
-        <Hero next={next} />,
-        <EnvelopeLetter next={next} />,
-        <Memories next={next} />,
-        <Proposal />
+        Hero,
+        EnvelopeLetter,
+        Memories,
+        Proposal
     ];
+
+    const [page, setPage] = useState(0);
+
+    const next = () => {
+        setPage(p => Math.min(p + 1, pages.length - 1));
+    };
+
+    const CurrentPage = pages[page];
 
     return (
         <>
@@ -28,7 +34,7 @@ export default function App() {
 
             <AnimatePresence mode="wait">
                 <PageTurn key={page}>
-                    {pages[page]}
+                    <CurrentPage next={next} />
                 </PageTurn>
             </AnimatePresence>
         </>
